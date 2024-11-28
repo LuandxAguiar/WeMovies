@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.MyApp" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <!-- Personalize as cores primária e secundária -->
+        <item name="colorPrimary">@color/backGroundInitail</item>
+        <item name="colorPrimaryDark">@color/black</item>
+        <item name="colorAccent">@color/top</item>
+    </style>
+</resources>

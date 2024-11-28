@@ -1,0 +1,120 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp"
+    android:background="@color/white">
+
+    <!-- Imagem do Filme -->
+    <ImageView
+        android:id="@+id/movieImage"
+        android:layout_width="80dp"
+        android:layout_height="120dp"
+        android:layout_alignParentStart="true"
+        android:layout_marginEnd="16dp" />
+
+    <!-- Título do Filme -->
+    <TextView
+        android:id="@+id/movieTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/movieImage"
+        android:text="Nome do Filme"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="#000000" />
+
+    <!-- Data de Adição -->
+    <TextView
+        android:id="@+id/addedDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/movieTitle"
+        android:layout_toEndOf="@id/movieImage"
+        android:text="Adicionado em 14/06/2024"
+        android:textSize="12sp"
+        android:textColor="@color/gray1"
+        android:layout_marginTop="4dp" />
+
+    <ImageButton
+        android:id="@+id/removeButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@id/movieTitle"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:src="@drawable/lixeira"
+        android:layout_marginEnd="8dp"
+        app:tint="@color/button"
+        />
+
+
+    <TextView
+        android:id="@+id/txtSbub"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/removeButton"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="37dp"
+        android:layout_marginEnd="15dp"
+        android:text="@string/subTotal"
+        android:textColor="@color/gray"
+        android:textSize="11sp"
+        android:textStyle="bold"
+        />
+    <TextView
+        android:id="@+id/itemSubtotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/removeButton"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="52dp"
+        android:layout_marginEnd="15dp"
+        android:text="R$ 29,99"
+        android:textColor="#000000"
+        android:textSize="14sp"
+        android:textStyle="bold" />
+
+    <!-- Controle de Quantidade -->
+    <LinearLayout
+        android:id="@+id/quantityControl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/addedDate"
+        android:layout_toEndOf="@id/movieImage"
+        android:orientation="horizontal"
+        android:layout_marginTop="16dp">
+
+        <ImageButton
+            android:id="@+id/decreaseButton"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/menos"
+            android:background="@color/white"
+            android:layout_marginEnd="4dp"
+            android:scaleType="centerInside"
+            app:tint="@color/button" />
+
+        <TextView
+            android:id="@+id/quantity"
+            android:layout_width="40dp"
+            android:layout_height="32dp"
+            android:gravity="center"
+            android:text="1"
+            android:textSize="16sp"
+            android:textColor="#000000" />
+
+        <ImageButton
+            android:id="@+id/increaseButton"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/mais"
+            android:background="@color/white"
+            android:layout_marginStart="4dp"
+            android:scaleType="centerInside"
+            app:tint="@color/button"
+            />
+    </LinearLayout>
+
+
+</RelativeLayout>
